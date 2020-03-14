@@ -18,4 +18,5 @@ def contact(request):
     name = request.POST['name']
     messages.success(request, 
     f'Obrigado {name} por entrar em contato, irei atende-lo o mais rapido possivel')
-    return render(request, 'start.html')
+    posts = Post.objects.filter(deleted=False)
+    return render(request, 'start.html', {'posts': posts})
