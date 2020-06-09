@@ -1,1 +1,1 @@
-web: gunicorn portifolio.wsgi --log-file -
+web: gunicorn dmevalneto.wsgi --log-file -
