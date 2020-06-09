@@ -1,11 +1,12 @@
 from django.shortcuts import render, HttpResponse
-from .models import Post, Contact
+from .models import Post, Contact, Experience
 from django.contrib import messages
 
 # Create your views here.
 def start(request):
     posts = Post.objects.filter(deleted=False)
-    return render(request, 'start.html', {'posts': posts})
+    experience = Experience.objects.all()
+    return render(request, 'start.html', {'posts': posts, 'experiences': experience})
 
 
 def contact(request):
