@@ -3,117 +3,118 @@
 
 {% block main %}
 <section class="resume-section p-3 p-lg-5 d-flex align-items-center" id="about">
-    <div class="w-100">
-      <h1 class="mb-0">Dmeval
-        <span class="text-primary">Neto</span>
-      </h1>
-      <div class="subheading mb-5">Desenvolvedor Web<br>
-        <a href="mailto:name@email.com">dnetochaves@gmail.com</a>
+  <div class="w-100">
+    <h1 class="mb-0">Dmeval
+      <span class="text-primary">Neto</span>
+    </h1>
+    <div class="subheading mb-5">Desenvolvedor Web<br>
+      <a href="mailto:name@email.com">dnetochaves@gmail.com</a>
+    </div>
+    <p class="lead mb-5">
+      Apaixonado por tecnologia, busco sempre estar alinhado com as melhores práticas do mercado, para que possa
+      oferecer sempre um serviço ágil e de qualidade nos locais em que trabalho.
+    </p>
+    <div class="social-icons">
+      <a href="https://www.linkedin.com/in/dmeval-neto-6bb652160/" target="blank">
+        <i class="fab fa-linkedin-in"></i>
+      </a>
+      <a href="https://github.com/dnetochaves" target="blank">
+        <i class="fab fa-github"></i>
+      </a>
+    </div>
+  </div>
+</section>
+
+<hr class="m-0">
+
+<section class="resume-section p-3 p-lg-5 d-flex justify-content-center" id="experience">
+  <div class="w-100">
+    <h2 class="mb-5">Experiência</h2>
+    {% for experience in experiences %}
+
+
+    <div class="resume-item d-flex flex-column flex-md-row justify-content-between mb-5">
+      <div class="resume-content">
+        <h3 class="mb-0">{{ experience.title }}</h3>
+        <div class="subheading mb-3">{{ experience.sub_title }}</div>
+        <p>{{ experience.description }}</p>
       </div>
-      <p class="lead mb-5">
-        Apaixonado por tecnologia, busco sempre estar alinhado com as melhores práticas do mercado, para que possa oferecer sempre um serviço ágil e de qualidade nos locais em que trabalho.
-      </p>
-      <div class="social-icons">
-        <a href="https://www.linkedin.com/in/dmeval-neto-6bb652160/" target="blank">
-          <i class="fab fa-linkedin-in"></i>
-        </a>
-        <a href="https://github.com/dnetochaves" target="blank">
-          <i class="fab fa-github"></i>
-        </a>
+      <div class="resume-date text-md-right">
+        <span class="text-primary">{{ experience.yers }}</span>
       </div>
     </div>
-  </section>
-
-  <hr class="m-0">
-
-  <section class="resume-section p-3 p-lg-5 d-flex justify-content-center" id="experience">
-    <div class="w-100">
-      <h2 class="mb-5">Experiência</h2>
-       {% for experience in experiences %}
-       
-
-          <div class="resume-item d-flex flex-column flex-md-row justify-content-between mb-5">
-            <div class="resume-content">
-              <h3 class="mb-0">{{ experience.title }}</h3>
-              <div class="subheading mb-3">{{ experience.sub_title }}</div>
-              <p>{{ experience.description }}</p>
-            </div>
-            <div class="resume-date text-md-right">
-              <span class="text-primary">{{ experience.yers }}</span>
-            </div>
-          </div>
 
 
-      {% endfor %}
+    {% endfor %}
 
- 
-     
 
-      
 
-    </div>
 
-  </section>
 
-  <hr class="m-0">
 
-  <section class="resume-section p-3 p-lg-5 d-flex align-items-center" id="education">
-    <div class="w-100">
-      <h2 class="mb-5">Educação</h2>
+  </div>
 
-      <div class="resume-item d-flex flex-column flex-md-row justify-content-between mb-5">
-        <div class="resume-content">
-          <h3 class="mb-0">Estácio</h3>
-          <div class="subheading mb-3">Análise e Desenvolvimento de Sistemas</div>
-          <div>.</div>
-          <p>.</p>
-        </div>
-        <div class="resume-date text-md-right">
-          <span class="text-primary">Cursando</span>
-        </div>
+</section>
+
+<hr class="m-0">
+
+<section class="resume-section p-3 p-lg-5 d-flex align-items-center" id="education">
+  <div class="w-100">
+    <h2 class="mb-5">Educação</h2>
+
+    <div class="resume-item d-flex flex-column flex-md-row justify-content-between mb-5">
+      <div class="resume-content">
+        <h3 class="mb-0">Estácio</h3>
+        <div class="subheading mb-3">Análise e Desenvolvimento de Sistemas</div>
+        <div>.</div>
+        <p>.</p>
       </div>
-
-      
+      <div class="resume-date text-md-right">
+        <span class="text-primary">Cursando</span>
+      </div>
     </div>
-  </section>
 
-  <hr class="m-0">
 
-  <section class="resume-section p-3 p-lg-5 d-flex align-items-center" id="skills">
-    <div class="w-100">
-      <h2 class="mb-5">Skills</h2>
+  </div>
+</section>
 
-      <div class="subheading mb-3">PROGRAMAÇÃO DE IDIOMAS E FERRAMENTAS</div>
-      <ul class="list-inline dev-icons">
-        <li class="list-inline-item">
-          <i class="fab fa-html5"></i>
-        </li>
-        <li class="list-inline-item">
-          <i class="fab fa-css3-alt"></i>
-        </li>
-        <li class="list-inline-item">
-          <i class="fab fa-bootstrap"></i>
-        </li>
-        <li class="list-inline-item">
-          <i class="fab fa-python"></i>
-        </li>
-        <li class="list-inline-item">
-          <i class="fab fa-aws"></i>
-        </li>
-        <li class="list-inline-item">
-          Heroku
-        </li>
-        <li class="list-inline-item">
-          Django
-        </li>
-        <li class="list-inline-item">
-          <i class="fab fa-git"></i>
-        </li>
-        <li class="list-inline-item">
-          <i class="fab fa-github"></i>
-        </li>
-      </ul>
-<!--
+<hr class="m-0">
+
+<section class="resume-section p-3 p-lg-5 d-flex align-items-center" id="skills">
+  <div class="w-100">
+    <h2 class="mb-5">Skills</h2>
+
+    <div class="subheading mb-3">PROGRAMAÇÃO DE IDIOMAS E FERRAMENTAS</div>
+    <ul class="list-inline dev-icons">
+      <li class="list-inline-item">
+        <i class="fab fa-html5"></i>
+      </li>
+      <li class="list-inline-item">
+        <i class="fab fa-css3-alt"></i>
+      </li>
+      <li class="list-inline-item">
+        <i class="fab fa-bootstrap"></i>
+      </li>
+      <li class="list-inline-item">
+        <i class="fab fa-python"></i>
+      </li>
+      <li class="list-inline-item">
+        <i class="fab fa-aws"></i>
+      </li>
+      <li class="list-inline-item">
+        Heroku
+      </li>
+      <li class="list-inline-item">
+        Django
+      </li>
+      <li class="list-inline-item">
+        <i class="fab fa-git"></i>
+      </li>
+      <li class="list-inline-item">
+        <i class="fab fa-github"></i>
+      </li>
+    </ul>
+    <!--
       <div class="subheading mb-3">Workflow</div>
       <ul class="fa-ul mb-0">
         <li>
@@ -131,79 +132,60 @@
       </ul>
     </div>
     -->
-  </section>
+</section>
 
-  <hr class="m-0">
+<hr class="m-0">
 
-  <section class="resume-section p-3 p-lg-5 d-flex align-items-center" id="posts">
-    <div class="w-100">
-      <h2 class="mb-5">Posts</h2>
+<section class="resume-section p-3 p-lg-5 d-flex align-items-center" id="posts">
+  <div class="w-100">
+    <h2 class="mb-5">Posts</h2>
 
-      {% for post in posts %}
-      <div class="card mb-3">
-        <!--<img src="{% static 'img/card.jpeg' %}" class="card-img-top" alt="...">-->
-        <img src="{{ post.photo.url }}" class="card-img-top" alt="..." width="300px" height="300px">
-        <div class="card-body">
-          <h5 class="card-title">{{ post.title }}</h5>
-          <p class="card-text">{{ post.content }}</p>
-          <p class="card-text"><small class="text-muted">.</small></p>
-         <!-- Button trigger modal -->
-          <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModalScrollable">
-            {{ post.title }}
-          </button>
+    {% for post in posts %}
+    <div class="card mb-3">
+      <!--<img src="{% static 'img/card.jpeg' %}" class="card-img-top" alt="...">-->
+      <img src="{{ post.photo.url }}" class="card-img-top" alt="..." width="300px" height="300px">
+      <div class="card-body">
+        <h5 class="card-title">{{ post.title }}</h5>
+        <p class="card-text">
+          <p><strong>Sobre o Projeto :</strong></p>
+          <p>{{post.content}}</p>
+          <p><strong>Tecnologias Utilizadas :</strong></p>
+          <p>{{post.tecnology}}</p>
+        </p>
+        <p class="card-text"><small class="text-muted">.</small></p>
+        <ul class="list-unstyled">
+      </div>
+    </div>
+    {% endfor %}
+  </div>
+</section>
 
-          <!-- Modal -->
-          <div class="modal fade" id="exampleModalScrollable" tabindex="-1" role="dialog" aria-labelledby="exampleModalScrollableTitle" aria-hidden="true">
-            <div class="modal-dialog modal-dialog-scrollable" role="document">
-              <div class="modal-content">
-                <div class="modal-header">
-                  <h5 class="modal-title" id="exampleModalScrollableTitle">Modal title</h5>
-                  <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                    <span aria-hidden="true">&times;</span>
-                  </button>
-                </div>
-                <div class="modal-body">
-                  {{ post.content }}
-                </div>
-                <div class="modal-footer">
-                  <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                  <button type="button" class="btn btn-primary">Save changes</button>
-                </div>
-              </div>
-            </div>
-          </div>
+<hr class="m-0">
+
+<section class="resume-section p-3 p-lg-5 d-flex align-items-center" id="contact">
+  <div class="w-100">
+    <h2 class="mb-5">Contato :</h2>
+    <form method="POST" action="{% url 'contact' %}">
+      {% csrf_token %}
+      <div class="form-row">
+        <div class="form-group col-md-6">
+          <label for="formGroupExampleInput">Example label</label>
+          <input type="text" class="form-control" id="name" name="name">
+        </div>
+        <div class="form-group col-md-6">
+          <label for="inputPassword4">Email</label>
+          <input type="email" class="form-control" id="email" name="email">
         </div>
       </div>
-      {% endfor %}
-    </div>
-  </section>
+      <div class="form-group">
+        <label for="inputAddress">Menssagem</label>
+        <textarea class="form-control" id="mensage" name="message" rows="3"></textarea>
+      </div>
 
-  <hr class="m-0">
 
-  <section class="resume-section p-3 p-lg-5 d-flex align-items-center" id="contact">
-    <div class="w-100">
-      <h2 class="mb-5">Contato :</h2>
-      <form method="POST" action="{% url 'contact' %}">
-        {% csrf_token %}
-        <div class="form-row">
-          <div class="form-group col-md-6">
-            <label for="formGroupExampleInput">Example label</label>
-            <input type="text" class="form-control" id="name" name="name">
-          </div>
-          <div class="form-group col-md-6">
-            <label for="inputPassword4">Email</label>
-            <input type="email" class="form-control" id="email" name="email">
-          </div>
-        </div>
-        <div class="form-group">
-          <label for="inputAddress">Menssagem</label>
-          <textarea class="form-control" id="mensage" name="message" rows="3"></textarea>
-        </div>
-       
-       
-       
-        <button type="submit" class="btn btn-primary">Enviar</button>
-      </form>
-    </div>
-  </section>
+
+      <button type="submit" class="btn btn-primary">Enviar</button>
+    </form>
+  </div>
+</section>
 {% endblock %}

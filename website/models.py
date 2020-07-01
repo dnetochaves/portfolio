@@ -7,6 +7,7 @@ class Post(models.Model):
     content = models.TextField()
     deleted = models.BooleanField(default=True)
     photo = models.ImageField(upload_to='posts', blank=True, null=True)
+    tecnology = models.CharField(max_length=200)
 
     def __str__(self):
         return self.title
